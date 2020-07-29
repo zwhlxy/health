@@ -1,0 +1,73 @@
+
+package com.zz.demo;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
+
+/**
+ * @Author zwh
+ * @Date 2020/7/7 10:56
+ * @Version 1.0
+ **/
+@Component
+public class User implements Serializable {
+
+    @Value("${user.names}")
+    private String name = "房玉政";
+    @Value("${user.age}")
+    private Integer age;
+    @Value("${user.address}")
+    private String address;
+    public static final String text = "wsad";
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
+    public void pay(String name) {
+        System.out.println(name + "250了");
+    }
+
+    public User() {
+    }
+
+    public User(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    private User(String address) {
+        this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}
