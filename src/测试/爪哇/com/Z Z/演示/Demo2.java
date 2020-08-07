@@ -50,7 +50,7 @@ public class Demo2 {
         method.invoke(user,"房玉政");
         Field[] fields = aClass.getDeclaredFields();
         System.out.println(fields);
-        String key = "玉政";
+        String key = "玉政老师";
 //        Arrays.stream(fields).filter(field -> field.getName().equals(key)).findFirst().get();
 
     }
