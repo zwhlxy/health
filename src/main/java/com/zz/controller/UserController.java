@@ -35,7 +35,7 @@ public class UserController {
 
     @RequestMapping(value = "/getXZandCJnums", method = RequestMethod.GET)
     public JSONObject getXZandCJnums() {
-        JSONObject jsonObject = JSON.parseObject("{\"cjTotal\":2405,\"message\":\"调用成功\",\"state\":\"200\",\"xzTotal\":2407,\"data\":[{\"CJNUMS\":95,\"REGION_CODE\":\"522626\",\"REGION_NAME\":\"岑巩县\",\"XZNUMS\":11},{\"CJNUMS\":30,\"REGION_CODE\":\"522691\",\"REGION_NAME\":\"凯里开发区\",\"XZNUMS\":2}]}");
+        JSONObject jsonObject = JSON.parseObject("{\"cjTotal\":2418,\"data\":[{\"CJNUMS\":176,\"REGION_CODE\":\"522601\",\"REGION_NAME\":\"凯里市\",\"XZNUMS\":16}],\"message\":\"调用成功\",\"state\":\"200\",\"xzTotal\":245}");
         return jsonObject;
     }
 
@@ -74,7 +74,7 @@ public class UserController {
 
     @RequestMapping(value = "/getBJKNumByTimeForQDN", method = RequestMethod.GET)
     public JSONObject getBJKNumByTimeForQDN() {
-        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"preApproveCount\":\"13712\",\"regionCode\":\"522600\",\"regionName\":\"黔东南州市场监督管理局\"}],\"state\":\"200\"}");
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"code\":\"556619992\",\"name\":\"黔东南州人力资源和社会保障局\",\"nums\":460},{\"code\":\"009750115\",\"name\":\"黔东南州水务局\",\"nums\":20},{\"code\":\"009750406\",\"name\":\"黔东南州农业农村局\",\"nums\":2},{\"code\":\"009750019\",\"name\":\"黔东南州商务局\",\"nums\":40},{\"code\":\"009750473\",\"name\":\"黔东南无线电管理局\",\"nums\":7},{\"code\":\"K36445525\",\"name\":\"黔东南州公安交管局\",\"nums\":2},{\"code\":\"009750828\",\"name\":\"黔东南州民政局\",\"nums\":18},{\"code\":\"750171765\",\"name\":\"黔东南州住房公积金管理中心\",\"nums\":7},{\"code\":\"00975006x\",\"name\":\"黔东南州交通运输局\",\"nums\":335},{\"code\":\"785466897\",\"name\":\"黔东南州机关事务管理局\",\"nums\":102},{\"code\":\"009750182\",\"name\":\"黔东南州文体广电旅游局\",\"nums\":2},{\"code\":\"714328235\",\"name\":\"黔东南州住房和城乡建设局\",\"nums\":526},{\"code\":\"009750836\",\"name\":\"黔东南州生态环境局\",\"nums\":620},{\"code\":\"009750641\",\"name\":\"黔东南州公安局\",\"nums\":439},{\"code\":\"52260070V\",\"name\":\"中共黔东南州委宣传部\",\"nums\":12},{\"code\":\"00975022X\",\"name\":\"黔东南州林业局\",\"nums\":55},{\"code\":\"009750334\",\"name\":\"黔东南州发展和改革委员会\",\"nums\":12},{\"code\":\"745709831\",\"name\":\"黔东南州卫生健康局\",\"nums\":1601},{\"code\":\"009750238\",\"name\":\"黔东南苗族侗族自治州市场监督管理局\",\"nums\":1065},{\"code\":\"741118794\",\"name\":\"黔东南州应急管理局\",\"nums\":156},{\"code\":\"009750799\",\"name\":\"黔东南州自然资源局\",\"nums\":8},{\"code\":\"009750844\",\"name\":\"黔东南州司法局\",\"nums\":312},{\"code\":\"00975049X\",\"name\":\"黔东南州烟草专卖局\",\"nums\":6},{\"code\":\"009750131\",\"name\":\"黔东南州教育局\",\"nums\":2},{\"code\":\"009750780\",\"name\":\"黔东南州财政局\",\"nums\":24}],\"state\":\"200\"}");
         return jsonObject;
     }
 
@@ -116,6 +116,7 @@ public class UserController {
 
     /**
      * 好差评 没有数据
+     *
      * @return
      */
     @RequestMapping(value = "/aspx", method = RequestMethod.GET)
@@ -124,6 +125,56 @@ public class UserController {
         return jsonObject;
     }
 
+    @RequestMapping(value = "/getOnlinePreApproveCount", method = RequestMethod.GET)
+    public JSONObject getOnlinePreApproveCount() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"orgCode\":\"714328235\",\"orgName\":\"黔东南州住房和城乡建设局\",\"preApproveCount\":\"1040\"},{\"orgCode\":\"009750182\",\"orgName\":\"黔东南州文体广电旅游局\",\"preApproveCount\":\"4\"},{\"orgCode\":\"009750799\",\"orgName\":\"黔东南州自然资源局\",\"preApproveCount\":\"1\"},{\"orgCode\":\"009750780\",\"orgName\":\"黔东南州财政局\",\"preApproveCount\":\"1\"},{\"orgCode\":\"741118794\",\"orgName\":\"黔东南州应急管理局\",\"preApproveCount\":\"1\"},{\"orgCode\":\"750171765\",\"orgName\":\"黔东南州住房公积金管理中心\",\"preApproveCount\":\"5967\"},{\"orgCode\":\"009750828\",\"orgName\":\"黔东南州民政局\",\"preApproveCount\":\"1\"},{\"orgCode\":\"5226001X6\",\"orgName\":\"中共黔东南州委机构编制委员会办公室\",\"preApproveCount\":\"1\"},{\"orgCode\":\"009750238\",\"orgName\":\"黔东南州市场监督管理局\",\"preApproveCount\":\"785\"},{\"orgCode\":\"00975006x\",\"orgName\":\"黔东南州交通运输局\",\"preApproveCount\":\"75\"},{\"orgCode\":\"009750334\",\"orgName\":\"黔东南州发展和改革委员会\",\"preApproveCount\":\"3\"},{\"orgCode\":\"009750131\",\"orgName\":\"黔东南州教育局\",\"preApproveCount\":\"2\"},{\"orgCode\":\"009750844\",\"orgName\":\"黔东南州司法局\",\"preApproveCount\":\"783\"},{\"orgCode\":\"009750641\",\"orgName\":\"黔东南州公安局\",\"preApproveCount\":\"3\"},{\"orgCode\":\"009750836\",\"orgName\":\"黔东南州生态环境局\",\"preApproveCount\":\"430\"},{\"orgCode\":\"556619992\",\"orgName\":\"黔东南州人力资源和社会保障局\",\"preApproveCount\":\"3\"},{\"orgCode\":\"K36445525\",\"orgName\":\"黔东南州公安交通管理局\",\"preApproveCount\":\"4\"},{\"orgCode\":\"745709831\",\"orgName\":\"黔东南州卫生健康局\",\"preApproveCount\":\"2636\"}],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/getNumByMonthForQDN", method = RequestMethod.GET)
+    public JSONObject getNumByMonthForQDN() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"month\":\"2020-06\",\"nums\":55499},{\"month\":\"2020-07\",\"nums\":60311},{\"month\":\"2020-08\",\"nums\":66429},{\"month\":\"2020-04\",\"nums\":60690},{\"month\":\"2020-05\",\"nums\":33919}],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+
+//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
+//    public JSONObject getItemCompressionTimeRate() {
+//        JSONObject jsonObject = JSON.parseObject("");
+//        return jsonObject;
+//    }
+//
+//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
+//    public JSONObject getItemCompressionTimeRate() {
+//        JSONObject jsonObject = JSON.parseObject("");
+//        return jsonObject;
+//    }
+//
+//
+//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
+//    public JSONObject getItemCompressionTimeRate() {
+//        JSONObject jsonObject = JSON.parseObject("");
+//        return jsonObject;
+//    }
+//
+//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
+//    public JSONObject getItemCompressionTimeRate() {
+//        JSONObject jsonObject = JSON.parseObject("");
+//        return jsonObject;
+//    }
+//
+//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
+//    public JSONObject getItemCompressionTimeRate() {
+//        JSONObject jsonObject = JSON.parseObject("");
+//        return jsonObject;
+//    }
+//
+//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
+//    public JSONObject getItemCompressionTimeRate() {
+//        JSONObject jsonObject = JSON.parseObject("");
+//        return jsonObject;
+//    }
+//
 //    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
 //    public JSONObject getItemCompressionTimeRate() {
 //        JSONObject jsonObject = JSON.parseObject("");
