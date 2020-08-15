@@ -104,13 +104,13 @@ public class UserController {
 
     @RequestMapping(value = "/queryRegionCodeMaterialCount", method = RequestMethod.GET)
     public JSONObject queryRegionCodeMaterialCount() {
-        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"CFNUMS\":216,\"CJNUMS\":0,\"GGNUMS\":251,\"JCNUMS\":41,\"JFNUMS\":25,\"NUMS\":5264,\"QRNUMS\":191,\"QTNUMS\":602,\"QZNUMS\":8,\"REGION_CODE\":\"522600\",\"REGION_NAME\":\"黔东南州\",\"XKNUMS\":3909,\"ZSNUMS\":15}],\"state\":\"200\"}");
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"CFNUMS\":770,\"CJNUMS\":28,\"GGNUMS\":1043,\"JCNUMS\":14,\"JFNUMS\":131,\"NUMS\":7858,\"QRNUMS\":695,\"QTNUMS\":586,\"QZNUMS\":119,\"REGION_CODE\":\"522636\",\"REGION_NAME\":\"丹寨县\",\"XKNUMS\":3931,\"ZSNUMS\":401},{\"CFNUMS\":1514,\"CJNUMS\":18,\"GGNUMS\":926,\"JCNUMS\":114,\"JFNUMS\":34,\"NUMS\":8205,\"QRNUMS\":528,\"QTNUMS\":752,\"QZNUMS\":87,\"REGION_CODE\":\"522600\",\"REGION_NAME\":\"黔东南州\",\"XKNUMS\":4098,\"ZSNUMS\":19},{\"CFNUMS\":478,\"CJNUMS\":23,\"GGNUMS\":851,\"JCNUMS\":31,\"JFNUMS\":60,\"NUMS\":6730,\"QRNUMS\":383,\"QTNUMS\":950,\"QZNUMS\":68,\"REGION_CODE\":\"522624\",\"REGION_NAME\":\"三穗县\",\"XKNUMS\":3334,\"ZSNUMS\":429}],\"state\":\"200\"}");
         return jsonObject;
     }
 
     @RequestMapping(value = "/queryOrganCodeMaterialCount", method = RequestMethod.GET)
     public JSONObject queryOrganCodeMaterialCount() {
-        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"CFNUMS\":0,\"CJNUMS\":0,\"GGNUMS\":0,\"JCNUMS\":0,\"JFNUMS\":0,\"NUMS\":4,\"ORG_CODE\":\"009750529\",\"ORG_NAME\":\"黔东南州水利水电工程移民局\",\"QRNUMS\":0,\"QTNUMS\":4,\"QZNUMS\":0,\"XKNUMS\":0,\"ZSNUMS\":0}],\"state\":\"200\"}");
+        JSONObject jsonObject = JSON.parseObject("{\"State\":\"200\",\"data\":[{\"CFNUMS\":1,\"CJNUMS\":0,\"GGNUMS\":0,\"JCNUMS\":1,\"JFNUMS\":0,\"NUMS\":15,\"ORG_CODE\":\"009750668\",\"ORG_NAME\":\"中共黔东南州委办公室（黔东南州档案局）\",\"QRNUMS\":0,\"QTNUMS\":10,\"QZNUMS\":0,\"XKNUMS\":2,\"ZSNUMS\":0},{\"CFNUMS\":0,\"CJNUMS\":0,\"GGNUMS\":0,\"JCNUMS\":0,\"JFNUMS\":0,\"NUMS\":20,\"ORG_CODE\":\"14237019\",\"ORG_NAME\":\"中国铁搭股份有限公司黔东南州分公司\",\"QRNUMS\":0,\"QTNUMS\":0,\"QZNUMS\":0,\"XKNUMS\":20,\"ZSNUMS\":0}]}");
         return jsonObject;
     }
 
@@ -164,24 +164,64 @@ public class UserController {
         JSONObject jsonObject = JSON.parseObject("{    \"data\":[{\"BJNUMS\":18875,\"ITEMNUMS\":5282,\"REGIONCODE\":\"522601\",\"REGIONNAME\":\"凯里市\"},{\"BJNUMS\":32220,\"ITEMNUMS\":2606,\"REGIONCODE\":\"522622\",\"REGIONNAME\":\"黄平县\"},{\"BJNUMS\":56315,\"ITEMNUMS\":2053,\"REGIONCODE\":\"522623\",\"REGIONNAME\":\"施秉县\"},{\"BJNUMS\":2302,\"ITEMNUMS\":3270,\"REGIONCODE\":\"522624\",\"REGIONNAME\":\"三穗县\"},{\"BJNUMS\":69478,\"ITEMNUMS\":3253,\"REGIONCODE\":\"522625\",\"REGIONNAME\":\"镇远县\"},{\"BJNUMS\":203092,\"ITEMNUMS\":3942,\"REGIONCODE\":\"522626\",\"REGIONNAME\":\"岑巩县\"},{\"BJNUMS\":41073,\"ITEMNUMS\":2187,\"REGIONCODE\":\"522627\",\"REGIONNAME\":\"天柱县\"},{\"BJNUMS\":141467,\"ITEMNUMS\":2918,\"REGIONCODE\":\"522628\",\"REGIONNAME\":\"锦屏县\"},{\"BJNUMS\":369695,\"ITEMNUMS\":5043,\"REGIONCODE\":\"522629\",\"REGIONNAME\":\"剑河县\"},{\"BJNUMS\":143086,\"ITEMNUMS\":4832,\"REGIONCODE\":\"522630\",\"REGIONNAME\":\"台江县\"},{\"BJNUMS\":415979,\"ITEMNUMS\":4259,\"REGIONCODE\":\"522631\",\"REGIONNAME\":\"黎平县\"},{\"BJNUMS\":118251,\"ITEMNUMS\":3415,\"REGIONCODE\":\"522632\",\"REGIONNAME\":\"榕江县\"},{\"BJNUMS\":29242,\"ITEMNUMS\":4171,\"REGIONCODE\":\"522633\",\"REGIONNAME\":\"从江县\"},{\"BJNUMS\":6263,\"ITEMNUMS\":2329,\"REGIONCODE\":\"522634\",\"REGIONNAME\":\"雷山县\"},{\"BJNUMS\":2761,\"ITEMNUMS\":3649,\"REGIONCODE\":\"522635\",\"REGIONNAME\":\"麻江县\"},{\"BJNUMS\":5049,\"ITEMNUMS\":4190,\"REGIONCODE\":\"522636\",\"REGIONNAME\":\"丹寨县\"}],\"state\":\"200\"}");
         return jsonObject;
     }
-//
-//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
-//    public JSONObject getItemCompressionTimeRate() {
-//        JSONObject jsonObject = JSON.parseObject("");
-//        return jsonObject;
-//    }
-//
-//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
-//    public JSONObject getItemCompressionTimeRate() {
-//        JSONObject jsonObject = JSON.parseObject("");
-//        return jsonObject;
-//    }
-//
-//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
-//    public JSONObject getItemCompressionTimeRate() {
-//        JSONObject jsonObject = JSON.parseObject("");
-//        return jsonObject;
-//    }
 
+    @RequestMapping(value = "/getOnlineRegApproveCount", method = RequestMethod.GET)
+    public JSONObject getOnlineRegApproveCount() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"preApproveCount\":\"13712\",\"regionCode\":\"522600\",\"regionName\":\"黔东南\"},{\"preApproveCount\":\"13712\",\"regionCode\":\"522111\",\"regionName\":\"凯里市\"}],\"state\":\"200\"}");
+        return jsonObject;
+    }
 
+    @RequestMapping(value = "/advisory1", method = RequestMethod.GET)
+    public JSONObject advisory1() {
+        JSONObject jsonObject = JSON.parseObject("{\"code\":\"0\",\"msg\":\"\",\"count\":0,\"svrid\":null,\"data\":[{\"OrgCode\":\"1093\",\"OrgName\":\"贵阳海关\",\"TOLNUM_ZX\":1,\"YCLSUM_ZX\":1,\"WHFSUM_ZX\":0,\"TOLNUM_TS\":0,\"YCLSUM_TS\":0,\"WHFSUM_TS\":0}]}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/advisory2", method = RequestMethod.GET)
+    public JSONObject advisory2() {
+        JSONObject jsonObject = JSON.parseObject("{\"code\":\"0\",\"msg\":\"\",\"count\":0,\"svrid\":null,\"data\":[{\"AreaCode\":\"522600\",\"AreaName\":\"黔东南州\",\"TOLNUM_ZX\":31,\"YCLSUM_ZX\":14,\"WHFSUM_ZX\":17,\"TOLNUM_TS\":5,\"YCLSUM_TS\":2,\"WHFSUM_TS\":3},{\"AreaCode\":\"522601\",\"AreaName\":\"凯里市\",\"TOLNUM_ZX\":129,\"YCLSUM_ZX\":129,\"WHFSUM_ZX\":0,\"TOLNUM_TS\":12,\"YCLSUM_TS\":12,\"WHFSUM_TS\":0}]}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/getOrganCodeEmsToDT1", method = RequestMethod.GET)
+    public JSONObject getOrganCodeEmsToDT1() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"NUMS\":2,\"REGION_CODE\":\"522630\",\"REGION_NAME\":\"台江县\"},{\"NUMS\":45,\"REGION_CODE\":\"522600\",\"REGION_NAME\":\"黔东南州\"},{\"NUMS\":1,\"REGION_CODE\":\"522601\",\"REGION_NAME\":\"凯里市\"}],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/getOrganCodeEmsToDT2", method = RequestMethod.GET)
+    public JSONObject getOrganCodeEmsToDT2() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"NUMS\":2,\"REGION_CODE\":\"522630\",\"REGION_NAME\":\"台江县\"},{\"NUMS\":45,\"REGION_CODE\":\"522600\",\"REGION_NAME\":\"黔东南州\"},{\"NUMS\":1,\"REGION_CODE\":\"522601\",\"REGION_NAME\":\"凯里市\"}],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/getRegionCodeEmsToSqr1", method = RequestMethod.GET)
+    public JSONObject getRegionCodeEmsToSqr1() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/getRegionCodeEmsToSqr2", method = RequestMethod.GET)
+    public JSONObject getRegionCodeEmsToSqr2() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/queryLicenseOrganNums1", method = RequestMethod.GET)
+    public JSONObject queryLicenseOrganNums1() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"ORG_CODE\":\"009750238\",\"ORG_NAME\":\"黔东南州市场监督管理局\",\"TOTAL_NUM\":3153,\"TYPE_NUM\":5},{\"ORG_CODE\":\"009750799\",\"ORG_NAME\":\"黔东南州自然资源局\",\"TOTAL_NUM\":0,\"TYPE_NUM\":2},{\"ORG_CODE\":\"009750131\",\"ORG_NAME\":\"黔东南州教育局\",\"TOTAL_NUM\":0,\"TYPE_NUM\":0}],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/queryLicenseOrganNums2", method = RequestMethod.GET)
+    public JSONObject queryLicenseOrganNums2() {
+        JSONObject jsonObject = JSON.parseObject("{\"Data\":[{\"PVALIDNUM\":0,\"REGIONCODE\":\"522600\",\"REGIONNAME\":\"黔东南州\",\"TYPENUM\":53,\"VALIDNUM\":5972},{\"PVALIDNUM\":0,\"REGIONCODE\":\"522601\",\"REGIONNAME\":\"凯里市\",\"TYPENUM\":13,\"VALIDNUM\":21038},{\"PVALIDNUM\":0,\"REGIONCODE\":\"522622\",\"REGIONNAME\":\"黄平县\",\"TYPENUM\":13,\"VALIDNUM\":9786}],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/getLicShareTimes", method = RequestMethod.GET)
+    public JSONObject getLicShareTimes() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"orgCode\":\"009450059\",\"orgName\":\"六盘水市商务局\",\"shareTimes\":1},{\"orgCode\":\"009450227\",\"orgName\":\"市生态环境局\",\"shareTimes\":1},{\"orgCode\":\"009450243\",\"orgName\":\"六盘水市市场监督管理局\",\"shareTimes\":2}],\"state\":\"200\"}");
+        return jsonObject;
+    }
 }
