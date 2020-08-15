@@ -92,7 +92,7 @@ public class UserController {
 
     @RequestMapping(value = "/getWebRateByTimeForQDN", method = RequestMethod.GET)
     public JSONObject getWebRateByTimeForQDN() {
-        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"organCode\":\"556619992\",\"organName\":\"黔东南州人力资源和社会保障局\",\"rate\":\"1.01%\"},{\"organCode\":\"009750238\",\"organName\":\"黔东南苗族侗族自治州市场监督管理局\",\"rate\":\"36.3%\"},{\"organCode\":\"741118794\",\"organName\":\"黔东南州应急管理局\",\"rate\":\"2.38%\"},{\"organCode\":\"009750780\",\"organName\":\"黔东南州财政局\",\"rate\":\"0%\"}],\"state\":\"200\"}");
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"code\":\"522636\",\"name\":\"行政区划代码为空\",\"rate\":\"18.46%\"},{\"code\":\"522600\",\"name\":\"黔东南苗族侗族自治州\",\"rate\":\"53.23%\"},{\"code\":\"522624\",\"name\":\"三穗县\",\"rate\":\"40.53%\"}],\"state\":\"200\"}");
         return jsonObject;
     }
 
@@ -115,13 +115,13 @@ public class UserController {
     }
 
     /**
-     * 好差评 没有数据
+     * 好差评
      *
      * @return
      */
     @RequestMapping(value = "/aspx", method = RequestMethod.GET)
     public JSONObject aspx() {
-        JSONObject jsonObject = JSON.parseObject("");
+        JSONObject jsonObject = JSON.parseObject("{\"code\":\"0\",\"msg\":\"\",\"count\":0,\"svrid\":null,\"data\":[{\"code\":\"522600\",\"names\":\"黔东南州\",\"pjcount\":4273,\"fcmycount\":775,\"fcmyL\":\"18.14\",\"mycount\":3486,\"myL\":\"81.58\",\"jbmycount\":12,\"jbmyL\":\"0.28\",\"bmycount\":0,\"bmyL\":\"0\",\"fcbmycount\":0,\"fcbmyL\":\"0\"},{\"code\":\"522601\",\"names\":\"凯里市\",\"pjcount\":39916,\"fcmycount\":20530,\"fcmyL\":\"51.43\",\"mycount\":19379,\"myL\":\"48.55\",\"jbmycount\":7,\"jbmyL\":\"0.02\",\"bmycount\":0,\"bmyL\":\"0\",\"fcbmycount\":0,\"fcbmyL\":\"0\"},{\"code\":\"522622\",\"names\":\"黄平县\",\"pjcount\":5096,\"fcmycount\":470,\"fcmyL\":\"9.22\",\"mycount\":4622,\"myL\":\"90.7\",\"jbmycount\":2,\"jbmyL\":\"0.04\",\"bmycount\":1,\"bmyL\":\"0.02\",\"fcbmycount\":1,\"fcbmyL\":\"0.02\"}]}");
         return jsonObject;
     }
 
@@ -138,36 +138,32 @@ public class UserController {
     }
 
 
-//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
-//    public JSONObject getItemCompressionTimeRate() {
-//        JSONObject jsonObject = JSON.parseObject("");
-//        return jsonObject;
-//    }
-//
-//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
-//    public JSONObject getItemCompressionTimeRate() {
-//        JSONObject jsonObject = JSON.parseObject("");
-//        return jsonObject;
-//    }
-//
-//
-//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
-//    public JSONObject getItemCompressionTimeRate() {
-//        JSONObject jsonObject = JSON.parseObject("");
-//        return jsonObject;
-//    }
-//
-//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
-//    public JSONObject getItemCompressionTimeRate() {
-//        JSONObject jsonObject = JSON.parseObject("");
-//        return jsonObject;
-//    }
-//
-//    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
-//    public JSONObject getItemCompressionTimeRate() {
-//        JSONObject jsonObject = JSON.parseObject("");
-//        return jsonObject;
-//    }
+    @RequestMapping(value = "/getAccelerationForQDN", method = RequestMethod.GET)
+    public JSONObject getAccelerationForQDN() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"code\":\"522636\",\"name\":\"丹寨县\",\"rate\":\"53.6%\"},{\"code\":\"522600\",\"name\":\"黔东南州\",\"rate\":\"48.72%\"},{\"code\":\"522624\",\"name\":\"三穗县\",\"rate\":\"58.18%\"}],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+
+
+
+    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
+    public JSONObject getItemCompressionTimeRate() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":[{\"agreeTime\":17715,\"lawTime\":30514,\"regionCode\":\"522600\",\"regionName\":\"黔东南州\",\"timeRate\":\"58.06%\"},{\"agreeTime\":11930,\"lawTime\":24300,\"regionCode\":\"522601\",\"regionName\":\"凯里市\",\"timeRate\":\"49.09%\"}],\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/getDeptAndItemNum", method = RequestMethod.GET)
+    public JSONObject getDeptAndItemNum() {
+        JSONObject jsonObject = JSON.parseObject("{\"data\":{\"CJ\":{\"deptnums\":2372,\"itemnums\":27511},\"QX\":{\"deptnums\":742,\"itemnums\":57685},\"XZ\":{\"deptnums\":210,\"itemnums\":14407},\"ZBJ\":{\"deptnums\":48,\"itemnums\":4654}},\"state\":\"200\"}");
+        return jsonObject;
+    }
+
+    @RequestMapping(value = "/getRegionBJAndItemNum", method = RequestMethod.GET)
+    public JSONObject getRegionBJAndItemNum() {
+        JSONObject jsonObject = JSON.parseObject("{    \"data\":[{\"BJNUMS\":18875,\"ITEMNUMS\":5282,\"REGIONCODE\":\"522601\",\"REGIONNAME\":\"凯里市\"},{\"BJNUMS\":32220,\"ITEMNUMS\":2606,\"REGIONCODE\":\"522622\",\"REGIONNAME\":\"黄平县\"},{\"BJNUMS\":56315,\"ITEMNUMS\":2053,\"REGIONCODE\":\"522623\",\"REGIONNAME\":\"施秉县\"},{\"BJNUMS\":2302,\"ITEMNUMS\":3270,\"REGIONCODE\":\"522624\",\"REGIONNAME\":\"三穗县\"},{\"BJNUMS\":69478,\"ITEMNUMS\":3253,\"REGIONCODE\":\"522625\",\"REGIONNAME\":\"镇远县\"},{\"BJNUMS\":203092,\"ITEMNUMS\":3942,\"REGIONCODE\":\"522626\",\"REGIONNAME\":\"岑巩县\"},{\"BJNUMS\":41073,\"ITEMNUMS\":2187,\"REGIONCODE\":\"522627\",\"REGIONNAME\":\"天柱县\"},{\"BJNUMS\":141467,\"ITEMNUMS\":2918,\"REGIONCODE\":\"522628\",\"REGIONNAME\":\"锦屏县\"},{\"BJNUMS\":369695,\"ITEMNUMS\":5043,\"REGIONCODE\":\"522629\",\"REGIONNAME\":\"剑河县\"},{\"BJNUMS\":143086,\"ITEMNUMS\":4832,\"REGIONCODE\":\"522630\",\"REGIONNAME\":\"台江县\"},{\"BJNUMS\":415979,\"ITEMNUMS\":4259,\"REGIONCODE\":\"522631\",\"REGIONNAME\":\"黎平县\"},{\"BJNUMS\":118251,\"ITEMNUMS\":3415,\"REGIONCODE\":\"522632\",\"REGIONNAME\":\"榕江县\"},{\"BJNUMS\":29242,\"ITEMNUMS\":4171,\"REGIONCODE\":\"522633\",\"REGIONNAME\":\"从江县\"},{\"BJNUMS\":6263,\"ITEMNUMS\":2329,\"REGIONCODE\":\"522634\",\"REGIONNAME\":\"雷山县\"},{\"BJNUMS\":2761,\"ITEMNUMS\":3649,\"REGIONCODE\":\"522635\",\"REGIONNAME\":\"麻江县\"},{\"BJNUMS\":5049,\"ITEMNUMS\":4190,\"REGIONCODE\":\"522636\",\"REGIONNAME\":\"丹寨县\"}],\"state\":\"200\"}");
+        return jsonObject;
+    }
 //
 //    @RequestMapping(value = "/getItemCompressionTimeRate", method = RequestMethod.GET)
 //    public JSONObject getItemCompressionTimeRate() {
